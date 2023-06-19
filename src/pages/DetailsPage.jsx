@@ -30,13 +30,6 @@ export function DetailsPage() {
 
   const handleClick = (type, id, name) => {
     setBreadcrumbs([{url:`/`, title: `users`} ,{url:`/${id}`, title: `${name}`}])
-
-    if(type === 'address') {
-      navigate(`/user/${id}/address`)
-    } else if(type === 'id'){
-      navigate(`/user/${id}`)
-    }
-
   }
 
 

@@ -12,18 +12,21 @@ export function BreadcrumbsTemplate() {
   }
 
   return (
-    <nav>
-      {breadcrumbs.map((el, index) => (
-          <NavLink 
-            key={el.url} 
-            to={el.url}
-            className={({isActive}) => isActive ? 'breadcrumb-active' : 'breadcrumb'}
-            onClick={() => handleRemove(index)}
-          >
-            {el.title}
-          </NavLink>
-        )
-      )}
+    <nav id='crumbs'>
+      <ul>
+        {breadcrumbs.map((el, index) => (
+          <li key={el.url}>
+            <NavLink 
+              to={`${el.url}`}
+              className={({isActive}) => isActive ? 'breadcrumb-active' : 'breadcrumb'}
+              onClick={() => handleRemove(index)}
+            >
+              {el.title}
+            </NavLink>
+          </li>
+          )
+        )}
+      </ul>
 
     </nav>
   );

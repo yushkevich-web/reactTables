@@ -24,7 +24,7 @@ export function RowTemplate({id, name, phone, email, address, website, onClick})
         </tr> 
       )}
       {address && (
-        <tr onClick={() => onClick('address')}>
+        <tr>
           <td>Adress</td>
           <td>{address.street}</td>
         </tr> 

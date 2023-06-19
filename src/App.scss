@@ -22,3 +22,78 @@ th {
   background-color: #3aa8c7;
   color: white;
 }
+
+#crumbs {
+	text-align: center;
+
+  ul {
+		list-style: none;
+		display: inline-table;
+		li {
+			display: inline;
+      color: #3b3a3a;
+			
+			a {
+			display: block;
+			float: left;
+			height: 50px;
+			background: #F3F5FA;
+      color: #3b3a3a;
+        
+			text-align: center;
+			padding: 30px 20px 0 60px;
+			position: relative;
+			margin: 0 10px 0 0; 
+			
+			font-size: 20px;
+			text-decoration: none;
+        
+			&:after {
+				content: "";  
+				border-top: 40px solid transparent;
+	 			border-bottom: 40px solid transparent;
+	  			border-left: 40px solid #F3F5FA;
+				position: absolute; 
+        right: -40px;
+        top: 0;
+				z-index: 1;
+			}
+			&:before {
+				content: "";  
+				border-top: 40px solid transparent;
+	  			border-bottom: 40px solid transparent;
+	  			border-left: 40px solid #fff;
+				position: absolute; 
+        left: 0; 
+        top: 0;
+			}
+		}
+		}
+	}
+}
+		
+#crumbs ul li:first-child a {
+border-top-left-radius: 10px; 
+  border-bottom-left-radius: 10px;
+				}
+				#crumbs ul li:first-child a:before {
+					display: none; 
+				}
+				
+				#crumbs ul li:last-child a {
+					padding-right: 40px;
+					border-top-right-radius: 10px; border-bottom-right-radius: 10px;
+				}
+				#crumbs ul li:last-child a:after {
+					display: none; 
+				}
+			
+			#crumbs ul li a:hover {
+				background: #3aa8c73b;
+        color:#3b3a3a;
+			}
+				#crumbs ul li a:hover:after {
+					border-left-color: #3aa8c73b;
+           color:#3b3a3a;
+				}
+		
